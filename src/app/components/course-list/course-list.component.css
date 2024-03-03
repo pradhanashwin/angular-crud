@@ -1,0 +1,102 @@
+.section-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section {
+    margin: 0; /* Remove default margin */
+}
+
+.view-all {
+    margin-left: auto; /* Push View All to the right */
+}
+
+.view-all:hover{
+    cursor: pointer;
+}
+
+.trending-thumbnail{
+    width: 13rem;
+    height: 8rem;
+}
+.course-item-link{
+    text-decoration: none;
+}
+.course-item {
+    /* Add styles for the course item */
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.course-item:hover {
+    cursor: pointer;
+    border-color: #555555; /* Change border color on hover */
+    box-shadow: 0 4px 8px #00000008; /* Add stronger box shadow on hover */
+}
+
+
+.course-list{
+    /* margin: 0; */
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.content-info{
+    display: flex;
+    flex-direction: column;
+}
+
+/* CSS for .content-info */
+.content-info {
+    padding: 10px;
+    padding-left: 0;
+}
+
+/* CSS for .video-title-row */
+.video-title-row {
+    display: flex;
+    align-items: center;
+}
+
+/* CSS for .video-author-row */
+.video-author-row {
+    display: flex;
+    align-items: end;
+}
+.author-avatar {
+    width: 20px; /* Adjust dimensions as needed */
+    height: 20px; /* Adjust dimensions as needed */
+    border-radius: 50%; /* Ensures the image appears as a circle */
+    object-fit: cover; /* Ensures the image covers the entire area */
+    margin-right: 5px;
+}
+
+.author-name{
+    font-size: x-small;
+}
+
+/* CSS for .student-count-row */
+.student-count-row {
+    display: flex;
+    align-items: center;
+}
+
+/* CSS for the badge */
+.badge {
+    background-color: rgb(222, 59, 64);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 8px;
+    margin-left: 10px; /* Adjust margin as needed */
+}
+
+/* CSS for the fab icon */
+.fab-icon {
+    /* Add styles for the fab icon */
+    /* Example styles:
+    font-size: 24px;
+    color: #007bff;
+    */
+}

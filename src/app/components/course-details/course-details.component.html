@@ -1,0 +1,45 @@
+<app-course-navbar></app-course-navbar>
+<div class="container">
+
+  @if(course){
+    <h2>{{ course.title}}</h2>
+    <div data-testid="start-resume-card" tabindex="-1" class="mb-3 card">
+      <div class="course__card-header">
+        <div class="course__card-header-content">
+          <div class="course__card-header-title-md">Begin your course today</div>
+        </div>
+        <div class="course__card-header-actions">
+          <a href="">Start course</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="course-description">
+        {{course.description }}
+      </div>
+    </div>
+    <div class="modules">
+      <div class="row w-100 m-0 mb-3 justify-content-end">
+        <div class="col-12 col-md-auto p-0">
+          <button type="button" class="btn btn-outline-primary btn-block" (click)="expandAllModules()">{{ allModulesCollaped ? 'Expand All' : 'Collapse All' }}</button>
+        </div>
+      </div>
+      @for (module of course.modules; track module.id) {
+        <div class="card courseHome" (click)="toggleCollapse(module)">
+          <div class="module-title" >
+            <span class="collapse-trigger">▶</span>
+            {{ module.title }}
+          </div>
+          <div class="module-lessons" [ngClass]="{ 'collapsed': module.collapsed }"> 
+            <ul>
+              @for (lesson of module.lessons; track lesson.id) {
+                <li> {{lesson.title }}</li>
+              }
+            </ul>
+          </div>
+        </div>
+      }
+    </div>
+  }
+</div>

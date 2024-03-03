@@ -1,0 +1,12 @@
+.pgn__card .pgn__card-header .pgn__card-header-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    overflow: auto;
+    text-align: start;
+    width: 100%;
+}
+
+.collapsed{
+    display: None;
+}
