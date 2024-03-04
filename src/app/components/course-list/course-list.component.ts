@@ -3,11 +3,11 @@ import { Course } from '../../models/course.model';
 import { CourseService } from '../../services/course.service';
 import { CommonModule } from '@angular/common';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
-import { CourseNavbarComponent } from '../course-navbar/course-navbar.component';
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-course-list',
   standalone: true,
-  imports: [CourseNavbarComponent,SlickCarouselModule],
+  imports: [SlickCarouselModule, RouterLink],
   templateUrl: './course-list.component.html',
   styleUrl: './course-list.component.css'
 })

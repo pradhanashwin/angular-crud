@@ -1,4 +1,3 @@
-<app-course-navbar></app-course-navbar>
 <div class="container">
 
   @if(course){
@@ -34,7 +33,7 @@
           <div class="module-lessons" [ngClass]="{ 'collapsed': module.collapsed }"> 
             <ul>
               @for (lesson of module.lessons; track lesson.id) {
-                <li> {{lesson.title }}</li>
+              <li> <a routerLink="/lessons/{{lesson.id}}" class="navbar-brand">{{lesson.title }}</a></li>
               }
             </ul>
           </div>

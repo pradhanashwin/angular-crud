@@ -21,6 +21,7 @@ export class CourseService {
     // only return data of courses
     return this.http.get(`${baseUrl}/${id}`);
   }
+
   getCourseDetails(id:any):Observable<Course>{
     let params = new HttpParams();
     params = params.append('module', true);
@@ -30,7 +31,7 @@ export class CourseService {
   getCourseMoudles(courseId: any): Observable<Module[]>{
     return this.http.get<Module[]>(`${baseUrl}/module/?courseId=${courseId}`);
   }
-
+  
   create(data: any): Observable<any> {
     return this.http.post(baseUrl, data);
   }

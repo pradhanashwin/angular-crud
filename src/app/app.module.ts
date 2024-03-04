@@ -6,7 +6,7 @@ import { CourseListComponent } from './components/course-list/course-list.compon
 // import { CourseDetailsComponent } from './components/course-details/course-details.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CourseNavbarComponent } from './components/course-navbar/course-navbar.component';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 @NgModule({
   declarations: [
   ],
@@ -14,8 +14,6 @@ import { CourseNavbarComponent } from './components/course-navbar/course-navbar.
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    HttpClientModule,
-    CourseNavbarComponent,
     AppRoutingModule,
   ],
   providers: [

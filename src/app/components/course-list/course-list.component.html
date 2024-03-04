@@ -10,7 +10,7 @@
                                 [config]="slideConfig" 
                                 >
             @for (course of courses; track course.id) {
-                <a class="course-item-link" href="/courses/{{course.id}}">
+                <a class="course-item-link" routerLink="/courses/{{course.id}}">
                     <div ngxSlickItem class="slide course-item" >
                         <img src="{{ course.url ? course.url : 'assets/default-fallback-image.png' }}" alt="" class="trending-thumbnail">
                         <div class="content-info">

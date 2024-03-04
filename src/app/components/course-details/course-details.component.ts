@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CourseService } from '../../services/course.service';
 import { Course } from '../../models/course.model';
 import { CommonModule } from '@angular/common';
 import { Module } from '../../models/module.model';
-import { CourseNavbarComponent } from '../course-navbar/course-navbar.component';
+import { AppRoutingModule } from '../../app-routing.module';
 
 @Component({
   selector: 'app-course-details',
   standalone:true,
-  imports: [CommonModule,CourseNavbarComponent],
+  imports: [CommonModule,RouterLink],
   templateUrl: './course-details.component.html',
   styleUrl: './course-details.component.css'
 })
@@ -39,13 +39,6 @@ export class CourseDetailsComponent implements OnInit {
     toggleCollapse(module: Module): void {
       module.collapsed = !module.collapsed;
     }
-    // expandAllModules(): void {
-    //   if (this.course && this.course.modules) {
-    //     this.course.modules.forEach((module: any) => {
-    //       module.collapsed = false; // Set 'collapsed' to false for all modules
-    //     });
-    //   }
-    // }
     expandAllModules(): void {
       if (this.course && this.course.modules) {
         this.course.modules.forEach((module: any) => {
